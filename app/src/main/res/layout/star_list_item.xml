@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/star_name"
+        style="@style/Widget.Star.ListItemTextView"
+        android:layout_width="180dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toStartOf="@id/watch_tower"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Big Star" />
+
+    <TextView
+        android:id="@+id/watch_tower"
+        style="@style/Widget.Star.ListItemTextView"
+        android:layout_width="100dp"
+        android:layout_below="@+id/star_name"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/star_name"
+        tools:text="5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

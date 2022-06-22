@@ -1,0 +1,23 @@
+<resources>
+    <string name="star_watch">Stargazing</string>
+    <string name="new_star">New</string>
+    <string name="star_list">List</string>
+    <string name="app_name">Stargazing</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="save">save</string>
+    <string name="delete">Delete</string>
+    <string name="edit_star">Edit</string>
+    <string name="star_name_req">Stars Name</string>
+    <string name="tower_number_req">Towers Number</string>
+    <string name="star_name">The name of the star:</string>
+    <string name="tower_number">Watchtower Number:</string>
+    <string name="stars_name_list">Stars Name</string>
+    <string name="watch_tower_list">Watch Tower</string>
+    <string name="take_picture">Take A Picture</string>
+    <string name="take_picture_description">Description</string>
+    <string name="ok_button_title">OK</string>
+    <string name="comment_optional">Comment (optional)</string>
+    <string name="comment_label">Comment:</string>
+    <string name="random_mars_pictures">Random Mars pictures</string>
+</resources>

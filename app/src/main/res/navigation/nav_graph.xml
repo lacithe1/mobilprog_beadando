@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.beadando.fragments.StartFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_newStarFragment"
+            app:destination="@id/newStarFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_starListFragment"
+            app:destination="@id/starListFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_overviewFragment2"
+            app:destination="@id/overviewFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newStarFragment"
+        android:name="com.example.beadando.fragments.NewStarFragment"
+        android:label="NewStarFragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="star_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_newStarFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_newStarFragment_to_starListFragment"
+            app:destination="@id/starListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/starListFragment"
+        android:name="com.example.beadando.fragments.StarListFragment"
+        android:label="StarListFragment">
+        <action
+            android:id="@+id/action_starListFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_starListFragment_to_starDetailFragment"
+            app:destination="@id/starDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/starDetailFragment"
+        android:name="com.example.beadando.fragments.StarDetailFragment"
+        android:label="fragment_star_detail"
+        tools:layout="@layout/fragment_star_detail">
+        <argument
+            android:name="star_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_starDetailFragment_to_newStarFragment"
+            app:destination="@id/newStarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.beadando.fragments.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/overviewFragment2"
+        android:name="com.example.beadando.fragments.OverviewFragment"
+        android:label="OverviewFragment" />
+</navigation>

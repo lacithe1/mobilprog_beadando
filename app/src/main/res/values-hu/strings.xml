@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="star_watch">Csillagnéző</string>
+    <string name="new_star">Új</string>
+    <string name="star_list">Lista</string>
+    <string name="app_name">Csillagnéző</string>
+    <string name="cancel">Mégsem</string>
+    <string name="back">Vissza</string>
+    <string name="save">Mentés</string>
+    <string name="delete">Törlés</string>
+    <string name="edit_star">Szerkeztés</string>
+    <string name="star_name_req">Csillag Neve</string>
+    <string name="tower_number_req">Torony Száma</string>
+    <string name="star_name">A csillag neve:</string>
+    <string name="tower_number">Csillagfigyelő torony száma:</string>
+    <string name="stars_name_list">Csillag Neve</string>
+    <string name="watch_tower_list">Torony Neve</string>
+    <string name="take_picture">Fénykép készítés</string>
+    <string name="take_picture_description">Leírás</string>
+    <string name="ok_button_title">OK</string>
+    <string name="comment_optional">Megjegyzés (opcionális)</string>
+    <string name="comment_label">Megjegyzés:</string>
+    <string name="random_mars_pictures">Random Mars képek</string>
+</resources>

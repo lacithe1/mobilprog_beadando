@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_between_elements">8dp</dimen>
+    <dimen name="image_size">300dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="button_width">250dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+</resources>

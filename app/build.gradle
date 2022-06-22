@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdk 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.beadando"
+        minSdk 19
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding  true
+        viewBinding  true
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //Lifecycle libraries
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+
+    // For Nav
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // For SQL
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    // Retrofit with Moshi Converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // Moshi
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
+
+    // Coil
+    implementation "io.coil-kt:coil:1.1.1"
+
+}

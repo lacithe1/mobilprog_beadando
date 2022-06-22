@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartFragment">
+
+    <data>
+
+        <variable
+            name="startFragment"
+            type="com.example.beadando.fragments.StartFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin">
+
+            <ImageView
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:importantForAccessibility="no"
+                android:scaleType="center"
+                android:src="@drawable/icon" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:text="@string/star_watch"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/material_on_background_emphasis_medium" />
+
+            <Button
+                android:id="@+id/new_star"
+                android:onClick="@{() -> startFragment.newStar()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/button_width"
+                android:text="@string/new_star" />
+
+            <Button
+                android:id="@+id/star_list"
+                android:onClick="@{() -> startFragment.starList()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/button_width"
+                android:text="@string/star_list" />
+
+            <Button
+                android:id="@+id/take_picture"
+                android:onClick="@{() -> startFragment.starCamera()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/button_width"
+                android:text="@string/take_picture" />
+
+            <Button
+                android:id="@+id/mars_pictures"
+                android:onClick="@{() -> startFragment.randomMarsPhotos()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/button_width"
+                android:text="@string/random_mars_pictures" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
